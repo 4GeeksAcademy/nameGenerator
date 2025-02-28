@@ -1,11 +1,18 @@
-import "bootstrap";
-import "./style.css";
+let pronom = ["the", "our", "my", "your"];
+let adj = ["great", "big", "small", "tiny"];
+let noun = ["jogger", "racoon", "dog", "cat"];
+let ext = [".com", ".net", ".us", ".io"];
 
+let result = "";
 
-import "./assets/img/rigo-baby.jpg";
-import "./assets/img/4geeks.ico";
+for (let i = 0; i <pronom.length; i++) {
+    for (let j = 0; j < adj.length; j++) {
+        for (let k = 0; k < noun.length; k++) {
+            for (let l = 0; l < ext.length; l++) {
+                result += pronom[i] + adj[j] + noun[k] + ext[l] + "<br>";
+            }
+        }
+    }
+}
 
-window.onload = function() {
-  //write your code here
-  console.log("Hello Rigo from the console!");
-};
+document.querySelector("#app").innerHTML = result;
